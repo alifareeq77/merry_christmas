@@ -1,0 +1,25 @@
+.stars{
+    font-size: 10pt;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.merry{
+    text-align: center;
+    font-size: 22pt;
+      background: linear-gradient(to right, #cc231e 10%, #f5624d 40%, #9fef00 60%, #235e6f 80%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }

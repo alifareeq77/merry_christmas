@@ -1,0 +1,43 @@
+body {
+    color: #fff;
+    background: #141d2b;
+    margin: 0;
+    padding: 0;
+    font-family: monospace, monospace;
+}
+
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    margin: 0;
+    padding: 0;
+    background-color: #111927;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar ul li {
+    display: block;
+    margin: 5rem;
+    font-size: 22pt;
+
+}
+
+#logo {
+    flex: 3;
+    padding-left: 1rem;
+}
+
+.navbar ul li a {
+    color: #9fef00;
+    text-decoration: none;
+    transition: all 3s ;
+}
+
+.navbar ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.002s ;
+}

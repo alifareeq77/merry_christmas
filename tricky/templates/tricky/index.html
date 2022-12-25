@@ -1,0 +1,57 @@
+{% extends 'tricky/layout.html' %}
+{% load static %}
+{% load spaces %}
+{% block extralinks %}
+    <link rel="stylesheet" href="{% static 'tricky/css/index.css' %}">
+{% endblock %}
+{% block title %}
+    merry Christmas
+{% endblock %}
+{% block body %}
+    <p class="merry">
+        merry christmas
+    </p>
+    {% if message %}
+    <p style="text-align: center">{{ message }}<strong style="color: #cc231e">, be careful !</strong></p>
+    {% endif %}
+    <div class="stars">
+        {% for i in cont %}
+            {% my_tag n i as k %}
+            {% if i == cont.0 %}
+                <span class="star" style="display: block;margin: 8px; color: red">
+                {% for x in ''|ljust:k %}
+                    &emsp;
+                {% endfor %}
+                    {% for x in ""|ljust:i %}*&emsp;{% endfor %}
+                    {% for x in ''|ljust:k %}
+                        &emsp;
+                    {% endfor %}
+                </span>
+
+            {% else %}
+                <span class="star" style="display: block;margin: 8px; color: #9fef00">
+                {% for x in ''|ljust:k %}
+                    &emsp;
+                {% endfor %}
+                    {% for x in ""|ljust:i %}*&emsp;{% endfor %}
+                    {% for x in ''|ljust:k %}
+                        &emsp;
+                    {% endfor %}
+            </span>
+            {% endif %}
+        {% endfor %}
+        {% my_tag n 2 as l %}
+        {% for x in ''|ljust:2 %}
+            <span class="star" style="display: block;margin: 8px; color: #705548">
+               {% for x in ''|ljust:l %}
+                   &emsp;
+               {% endfor %}
+                *
+                {% for x in ''|ljust:l %}
+                    &emsp;
+                {% endfor %}
+        </span>
+        {% endfor %}
+    </div>
+
+{% endblock %}

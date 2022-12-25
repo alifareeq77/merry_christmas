@@ -1,0 +1,28 @@
+{% extends 'tricky/layout.html' %}
+{% block title %} oops!!!{% endblock %}
+{% block body %}
+<p style="font-size: 25pt; text-align: center; color: #9fef00">oops !! the tree has fallen down :)
+    <br><strong >merry Christmas to you!</strong>
+</p>
+<style>
+strong{
+        text-align: center;
+    font-size: 22pt;
+      background: linear-gradient(to right, #cc231e 20%, #9fef00 40%, #9fef00 60%, #235e6f 80%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+
+}
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+</style>
+{% endblock %}
