@@ -5,7 +5,7 @@ def index(request, n):
     if int(n) >= 45:
         return render(request, 'tricky/oops.html')
 
-    context = range(1, 21)
+    context = range(1, int(n))
     if int(n) > 20:
         message = f'you moved the tree by {int(n)-20}px'
     return render(request, 'tricky/index.html', {
